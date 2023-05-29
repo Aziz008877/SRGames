@@ -11261,6 +11261,8 @@ GameObject:
   - component: {fileID: 438077285}
   - component: {fileID: 438077289}
   - component: {fileID: 438077290}
+  - component: {fileID: 438077292}
+  - component: {fileID: 438077291}
   m_Layer: 5
   m_Name: HandMenuCanvas
   m_TagString: Untagged
@@ -11381,6 +11383,78 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &438077291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438077284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cff92ba7c361d849ad269eb1842a547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _questionText: {fileID: 1419482970}
+  _answerOptions:
+  - {fileID: 1835147933}
+  - {fileID: 1933887329}
+  - {fileID: 1258380330}
+  - {fileID: 1772621436}
+  _onAnsweredCorrect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 438077292}
+        m_TargetAssemblyTypeName: QuestionContainer, Assembly-CSharp
+        m_MethodName: TryIncreaseQuestionData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onAnsweredWrong:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &438077292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438077284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713fd013f5d5ec045bfa2219e4183e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _allQuestions:
+  - {fileID: 11400000, guid: fe1b2d2b637a0dd4cb0819b9dc7cfaee, type: 2}
+  - {fileID: 11400000, guid: e58983d8900baeb479d787a67ea40b50, type: 2}
+  - {fileID: 11400000, guid: ca668fc936eae484297c16d4313f40b0, type: 2}
+  - {fileID: 11400000, guid: 6504c080ded93cc41a4a413fc3e80be6, type: 2}
+  - {fileID: 11400000, guid: f5b7ad0098729494ba0f8481a4a2dacd, type: 2}
+  - {fileID: 11400000, guid: 4f76b4d1ac7494c43846d70ad73bb66d, type: 2}
+  - {fileID: 11400000, guid: fdcdf9e4dd4601b4194bf8eff41e6fc8, type: 2}
+  - {fileID: 11400000, guid: 252d012d74a208d4a8d97a71c29b808f, type: 2}
+  _onQuestionSent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 438077291}
+        m_TargetAssemblyTypeName: QuizDisplayer, Assembly-CSharp
+        m_MethodName: ReceiveQuestionData
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &486474492
 GameObject:
   m_ObjectHideFlags: 0
