@@ -220,8 +220,9 @@ GameObject:
   - component: {fileID: 7807365}
   - component: {fileID: 7807364}
   - component: {fileID: 7807366}
+  - component: {fileID: 7807367}
   m_Layer: 0
-  m_Name: Earth
+  m_Name: EarthSocket
   m_TagString: TrackingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,6 +313,21 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &7807367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c28f3b7094c34246a6baf930fe22a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightAnswer: {fileID: 1733945776496697}
+  _planetPositionController: {fileID: 821393249}
+  IsCorrectPlacement: 0
 --- !u!1 &28347130
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,8 +557,9 @@ GameObject:
   - component: {fileID: 72524475}
   - component: {fileID: 72524474}
   - component: {fileID: 72524476}
+  - component: {fileID: 72524477}
   m_Layer: 0
-  m_Name: Mars
+  m_Name: MarsSocket
   m_TagString: TrackingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -633,6 +650,21 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &72524477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72524473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c28f3b7094c34246a6baf930fe22a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightAnswer: {fileID: 1288793825046931}
+  _planetPositionController: {fileID: 821393249}
+  IsCorrectPlacement: 0
 --- !u!1001 &86517750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11269,7 +11301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &438077285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11455,6 +11487,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onQuizPassed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &486474492
 GameObject:
   m_ObjectHideFlags: 0
@@ -11567,8 +11602,9 @@ GameObject:
   - component: {fileID: 498375847}
   - component: {fileID: 498375846}
   - component: {fileID: 498375848}
+  - component: {fileID: 498375849}
   m_Layer: 0
-  m_Name: Mercury
+  m_Name: MercurySocket
   m_TagString: TrackingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11659,6 +11695,21 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &498375849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498375845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c28f3b7094c34246a6baf930fe22a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightAnswer: {fileID: 1856687700062842}
+  _planetPositionController: {fileID: 821393249}
+  IsCorrectPlacement: 0
 --- !u!1 &534289251
 GameObject:
   m_ObjectHideFlags: 0
@@ -26584,6 +26635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 821393248}
+  - component: {fileID: 821393249}
   m_Layer: 0
   m_Name: SolarSystem
   m_TagString: Untagged
@@ -26615,6 +26667,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &821393249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821393247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368a800c9bc73f342b835f0fb214331e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _allPlanetSockets:
+  - {fileID: 498375849}
+  - {fileID: 1320348361}
+  - {fileID: 7807367}
+  - {fileID: 72524477}
+  - {fileID: 2027573100}
+  - {fileID: 1283912979}
+  - {fileID: 1468285058}
+  - {fileID: 1912616855}
+  _onPlanetPositionDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 438077284}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &883216734
 GameObject:
   m_ObjectHideFlags: 0
@@ -37320,8 +37408,9 @@ GameObject:
   - component: {fileID: 1283912977}
   - component: {fileID: 1283912976}
   - component: {fileID: 1283912978}
+  - component: {fileID: 1283912979}
   m_Layer: 0
-  m_Name: Saturn
+  m_Name: SaturnSocket
   m_TagString: TrackingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37412,6 +37501,21 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &1283912979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283912975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c28f3b7094c34246a6baf930fe22a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightAnswer: {fileID: 1377197191535010}
+  _planetPositionController: {fileID: 821393249}
+  IsCorrectPlacement: 0
 --- !u!1 &1320348357
 GameObject:
   m_ObjectHideFlags: 0
@@ -37423,8 +37527,9 @@ GameObject:
   - component: {fileID: 1320348359}
   - component: {fileID: 1320348358}
   - component: {fileID: 1320348360}
+  - component: {fileID: 1320348361}
   m_Layer: 0
-  m_Name: Venus
+  m_Name: VenusSocket
   m_TagString: TrackingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37515,6 +37620,21 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &1320348361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320348357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c28f3b7094c34246a6baf930fe22a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightAnswer: {fileID: 1647582792983198}
+  _planetPositionController: {fileID: 821393249}
+  IsCorrectPlacement: 0
 --- !u!1 &1361028061
 GameObject:
   m_ObjectHideFlags: 0
@@ -37877,8 +37997,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393831382}
-  m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: -0.30339432, y: -0.0011332035, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37887,7 +38007,7 @@ Transform:
   - {fileID: 1914535510}
   m_Father: {fileID: 1568888352}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1393831388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38392,8 +38512,9 @@ GameObject:
   - component: {fileID: 1468285056}
   - component: {fileID: 1468285055}
   - component: {fileID: 1468285057}
+  - component: {fileID: 1468285058}
   m_Layer: 0
-  m_Name: Uranus
+  m_Name: UranusSocket
   m_TagString: TrackingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38484,6 +38605,21 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &1468285058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468285054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c28f3b7094c34246a6baf930fe22a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightAnswer: {fileID: 1014736717751116}
+  _planetPositionController: {fileID: 821393249}
+  IsCorrectPlacement: 0
 --- !u!1 &1487703976
 GameObject:
   m_ObjectHideFlags: 0
@@ -45092,8 +45228,9 @@ GameObject:
   - component: {fileID: 1912616853}
   - component: {fileID: 1912616852}
   - component: {fileID: 1912616854}
+  - component: {fileID: 1912616855}
   m_Layer: 0
-  m_Name: Neptune
+  m_Name: NeptuneSocket
   m_TagString: TrackingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45184,6 +45321,21 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &1912616855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912616851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c28f3b7094c34246a6baf930fe22a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightAnswer: {fileID: 1610884584247940}
+  _planetPositionController: {fileID: 821393249}
+  IsCorrectPlacement: 0
 --- !u!1 &1914535509
 GameObject:
   m_ObjectHideFlags: 0
@@ -45907,8 +46059,9 @@ GameObject:
   - component: {fileID: 2027573098}
   - component: {fileID: 2027573097}
   - component: {fileID: 2027573099}
+  - component: {fileID: 2027573100}
   m_Layer: 0
-  m_Name: Jupiter
+  m_Name: JupiterSocket
   m_TagString: TrackingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45999,6 +46152,21 @@ MonoBehaviour:
   m_SocketActive: 1
   m_InteractableHoverScale: 1
   m_RecycleDelayTime: 1
+--- !u!114 &2027573100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027573096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c28f3b7094c34246a6baf930fe22a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightAnswer: {fileID: 1526814087474107}
+  _planetPositionController: {fileID: 821393249}
+  IsCorrectPlacement: 0
 --- !u!4 &2107252789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 109434732395451463, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
