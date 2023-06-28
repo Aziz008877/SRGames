@@ -6,20 +6,18 @@ public class PlanetPositionChecker : MonoBehaviour
 {
     [SerializeField] private GameObject _rightAnswer;
     [SerializeField] private PlanetPositionController _planetPositionController;
-    private XRSocketInteractor _xrSocketInteractor;
+    [SerializeField] private XRSocketInteractor _xrSocketInteractor;
     [HideInInspector] public bool IsCorrectPlacement = false;
 
     private void Start()
     {
-        _xrSocketInteractor.GetComponent<XRSocketInteractor>();
-        
         _xrSocketInteractor.selectEntered.AddListener(OnSelectEnter);
         _xrSocketInteractor.selectExited.AddListener(OnSelectExit);
     }
     
     private void OnSelectEnter(SelectEnterEventArgs args)
     {
-        if (args.interactableObject == _rightAnswer.transform)
+        if (args.interactableObject.transform.gameObject == _rightAnswer)
         {
             IsCorrectPlacement = true;
             _planetPositionController.TryCompleteQuiz();

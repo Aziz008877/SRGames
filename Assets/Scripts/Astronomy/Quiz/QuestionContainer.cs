@@ -22,7 +22,7 @@ public class QuestionContainer : MonoBehaviour
 
     public void TryIncreaseQuestionData()
     {
-        if (_currentQuestionID < _allQuestions.Count)
+        if (_currentQuestionID < _allQuestions.Count - 1)
         {
             _currentQuestionID++;
             SendNewQuestion();
