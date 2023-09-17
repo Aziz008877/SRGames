@@ -1384,6 +1384,17 @@
                 },
                 {
                     "name": "",
+                    "id": "08f8b172-4369-4e1a-8864-3f855741a30b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select Value",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "fa59aed1-ae0b-4074-a58c-294b85f46228",
                     "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
