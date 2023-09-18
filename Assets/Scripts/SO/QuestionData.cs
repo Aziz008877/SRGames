@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Create New Question", fileName = "New Question")]
-public class QuestionSO : ScriptableObject
+public class QuestionData : ScriptableObject
 {
     [SerializeField] private string _question;
     [SerializeField] private List<string> _wrongAnswers;
